@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "mongodbatlasquickstartcluster-0928"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "mongodbatlasquickstartcluster-0928"
+  template:
+    metadata:
+      labels:
+        app: "mongodbatlasquickstartcluster-0928"
+    spec:
+      containers:
+        - name: "mongodbatlasquickstartcluster-0928"
+          image: "mongodbatlastest123.azurecr.io/mongodbatlasquickstartcluster"
+          ports:
+          - containerPort: 80
